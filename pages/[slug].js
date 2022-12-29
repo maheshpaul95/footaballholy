@@ -8,7 +8,7 @@ export default function Post({ post }) {
 
   useEffect(() => {
     if (post[0]?.slug) {
-      router.push(`https://footaballholy.xyz/${post[0]?.slug}`);
+      router.push(`https://dailybuzzs.com/${post[0]?.slug}`);
     }
   }, [post[0]?.slug]);
 
@@ -39,7 +39,7 @@ export default function Post({ post }) {
 // export async function getStaticProps({ params }) {
 //   const slug = params.slug;
 //   const res = await axios.get(
-//     `https://footaballholy.xyz/wp-json/wp/v2/posts?slug=${slug}`
+//     `https://dailybuzzs.com/wp-json/wp/v2/posts?slug=${slug}`
 //   );
 //   const post = res?.data;
 //   return {
@@ -52,7 +52,7 @@ export default function Post({ post }) {
 
 // export async function getStaticPaths() {
 //   const res = await axios.get(
-//     "https://footaballholy.xyz/wp-json/wp/v2/posts?_embed&per_page=100"
+//     "https://dailybuzzs.com/wp-json/wp/v2/posts?_embed&per_page=100"
 //   );
 //   const posts = res?.data;
 //   const paths = posts.map((post) => ({
@@ -64,7 +64,7 @@ export default function Post({ post }) {
 export async function getServerSideProps({ params }) {
   const slug = params.slug;
   const res = await axios.get(
-    `https://footaballholy.xyz/wp-json/wp/v2/posts?slug=${slug}`
+    `https://dailybuzzs.com/wp-json/wp/v2/posts?slug=${slug}`
   );
   const post = res?.data;
   return {
